@@ -1,0 +1,408 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jorge Camarena – Software Engineer</title>
+  <meta name="description" content="Portfolio of Jorge Camarena – Software Engineer specializing in backend, .NET, and data-driven apps." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" aria-label="Primary">
+    <div class="wrap">
+      <a class="brand" href="#home" aria-label="Home">
+        <span class="brand__dot" aria-hidden="true"></span>
+        <span class="brand__text">Jorge Camarena</span>
+      </a>
+      <nav class="nav" aria-label="Main navigation">
+        <button class="nav__toggle" aria-expanded="false" aria-controls="nav-list">Menu</button>
+        <ul id="nav-list" class="nav__list">
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a class="btn btn--sm" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section id="home" class="hero">
+      <div class="wrap hero__grid">
+        <div class="hero__copy">
+          <p class="eyebrow">Software Engineer • Backend & ML</p>
+          <h1>Jorge Camarena</h1>
+          <p class="lead">
+            UC Berkeley Data Science grad focused on .NET, Python, and scalable APIs.
+            Passionate about building impactful and scalable projects
+          </p>
+          <div class="hero__cta">
+            <!-- <a class="btn" href="#projects">See Projects</a> -->
+            <a  id="download-resume" class="btn btn--ghost" rel="noopener noreferrer" href="assets/Resume_August2024 copy.pdf" target="_blank" >Download Résumé</a>
+          </div>
+          <ul class="hero__meta" aria-label="Highlights">
+            <li>• .NET Core, FastAPI, Node.js, Postgres</li>
+            <li>• Caching, testing, CI/CD</li>
+            <li>• Recsys & analytics</li>
+          </ul>
+        </div>
+        <figure class="hero__card" aria-labelledby="portrait-caption">
+          <img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?q=80&w=1200&auto=format&fit=crop"
+               alt="Developer at a desk with code on screen" width="640" height="480" />
+          <figcaption id="portrait-caption" class="visually-hidden">
+            Portfolio portrait / workspace.
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <div class="wrap">
+        <header class="section__hd">
+          <h2>Projects</h2>
+          <p class="sub">Production-minded builds with tests, docs, and deployments.</p>
+        </header>
+        <div class="grid projects">
+          <!-- Card 1 -->    
+          <a class="project-link" href="https://github.com/jorge-camarena/StockMarketApp" target="_blank">  
+          <article class="card">
+            
+            <img src="./images/stockPortfolio.jpg"
+                 alt="Stock charts on multiple monitors" loading="lazy" />
+            <div class="card__body">
+              <h3>StockManager API</h3>
+              <p>A layered .NET service for quotes & time-series with caching, Polly, and CI.</p>
+              <ul class="tags">
+                <li>.NET</li><li>Postgres</li><li>Redis</li><li>Docker</li>
+              </ul>
+              <!-- <div class="card__actions">
+                <a class="btn btn--sm" href="#" aria-label="Live demo of StockManager">Live</a>
+                <a class="btn btn--sm btn--ghost" href="#" aria-label="GitHub repository of StockManager">GitHub</a>
+              </div> -->
+            </div>
+            
+          </article>
+          </a>
+        
+          <!-- Card 2 -->
+           <a class="project-link" href="https://github.com/jorge-camarena/BearMaps" target="_blank">
+          <article class="card">
+            <img src="./images/Berkeley-Map.jpg"
+                 alt="Code editor with JavaScript project open" loading="lazy" />
+            <div class="card__body">
+              <h3>Bear Maps</h3>
+              <p>A simplistic googlemaps version of the city of Berkeley, CA</p>
+              <ul class="tags">
+                <li>Java</li><li>Core Data</li><li>Image Rastering</li>
+              </ul>
+              <div class="card__actions">
+                <!-- <a class="btn btn--sm" href="#">TestFlight</a>
+                <a class="btn btn--sm btn--ghost" href="#">Source</a> -->
+              </div>
+            </div>
+          </article>
+           </a>
+          <!-- Card 3 -->
+           <a class="project-link" href="https://github.com/jorge-camarena/reinforcement-learning" target="_blank">
+          <article class="card">
+            <img src="./images/pac-man-facts.jpg"
+                 alt="Terminal window and backend server logs" loading="lazy" />
+            <div class="card__body">
+              <h3>Pacman Reinforcement Learning</h3>
+              <p>Q-learning pacman agent trained to optimally solve games</p>
+              <ul class="tags">
+                <li>Python</li><li>Machine Learning</li><li>Q-Learning</li>
+              </ul>
+              <div class="card__actions">
+                <!-- <a class="btn btn--sm" href="#">Demo</a>
+                <a class="btn btn--sm btn--ghost" href="#">Repo</a> -->
+              </div>
+            </div>
+          </article>
+          </a>
+          <!-- Card 4 -->
+           <a class="project-link" href="https://github.com/jorge-camarena/StreamTube" target="_blank">
+          <article class="card">
+            <img src="./images/youtube_app.jpeg"
+                 alt="Terminal window and backend server logs" loading="lazy" />
+            <div class="card__body">
+              <h3>StreamTube</h3>
+              <p>Websocket controlled Youtube player for multiple viewers</p>
+              <ul class="tags">
+                <li>Node.js</li><li>React.js</li><li>Socket.io</li><li>Docker</li>
+              </ul>
+              <div class="card__actions">
+                <!-- <a class="btn btn--sm" href="#">Demo</a>
+                <a class="btn btn--sm btn--ghost" href="#">Repo</a> -->
+              </div>
+            </div>
+          </article>
+          </a>
+          <!-- Card 5 -->
+           <a class="project-link" href="https://github.com/jorge-camarena/Encrypted-FileSharing-System" target="_blank">
+          <article class="card">
+            <img src="./images/encryption-image.jpg"
+                 alt="Terminal window and backend server logs" loading="lazy" />
+            <div class="card__body">
+              <h3>Encrypted Filesharing System</h3>
+              <p>Server side robust encryption scheme, stress-tested</p>
+              <ul class="tags">
+                <li>Golang</li><li>Cyber Security</li><li>Encryption</li>
+              </ul>
+              <div class="card__actions">
+                <!-- <a class="btn btn--sm" href="#">Demo</a>
+                <a class="btn btn--sm btn--ghost" href="#">Repo</a> -->
+              </div>
+            </div>
+          </article>
+          </a>
+          <!-- Card 6 -->
+           <a class="project-link" href="https://github.com/jorge-camarena/Scheme-Interpreter" target="_blank">
+          <article class="card">
+            <img src="./images/scheme-img.png"
+                 alt="Terminal window and backend server logs" loading="lazy" />
+            <div class="card__body">
+              <h3>Scheme Interpreter</h3>
+              <p>Python based scheme interpeter and evaluator</p>
+              <ul class="tags">
+                <li>Python</li><li>Scheme</li>
+              </ul>
+              <div class="card__actions">
+                <!-- <a class="btn btn--sm" href="#">Demo</a>
+                <a class="btn btn--sm btn--ghost" href="#">Repo</a> -->
+              </div>
+            </div>
+          </article>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section section--alt">
+      <div class="wrap">
+        <header class="section__hd">
+          <h2>Experience</h2>
+          <p class="sub">Internships, education, and notable contributions.</p>
+        </header>
+        <ul class="timeline">
+          <li class="timeline__item">
+            <div class="timeline__dot" aria-hidden="true"></div>
+            <div>
+              <h3>Education — University of California, Berkeley</h3>
+              <p class="muted">Jan 2016 – Dec 2020 • Berkeley</p>
+              <h4>Relevant Course Work</h4>
+              <p>CS 61A: The Structure and Interpretation of Computer Programs</p>
+              <p>CS 61B: Data Structures</p>
+              <p>CS C100: Principles and Techniques of Data Science</p>
+              <p>CS 161: Computer Security</p>
+              <p>CS 188: Introduction to Artificial Intelligence</p>
+              <p>STAT 102: Data, Inference, and Decisions</p>
+              <p>STAT 140: Probability for Data Science</p>
+              <p>MATH 55: Discrete Mathematics and Probability Theory</p>
+              <p>MATH 110: Linear Algebra</p>
+              <p>MATH 128A: Numerical Analysis</p>
+
+            </div>
+          </li>
+          <li class="timeline__item">
+            <div class="timeline__dot" aria-hidden="true"></div>
+            <div>
+              <h3>Internship — Wind River</h3>
+              <p class="muted"> March 2021 – July 2021 • Remote</p>
+              <p>Participated in onboarding and technical training sessions to learn the company’s embedded systems architecture and software development lifecycle.</p>
+              <p>Gained hands-on exposure to Wind River’s tech stack, build environments, and CI/CD tools used for embedded Linux and real-time OS products.</p>
+              <p>Shadowed senior engineers and contributed to internal documentation on system components and development best practices.</p>
+            </div>
+          </li>
+          <li class="timeline__item">
+            <div class="timeline__dot" aria-hidden="true"></div>
+            <div>
+              <h3>Open Source — Finance Data Tools</h3>
+              <p class="muted">2023 – present • Remote</p>
+              <p>Maintainer for an OSS library that normalizes OHLCV feeds across brokers.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <!-- <section id="skills" class="section">
+      <div class="wrap">
+        <header class="section__hd">
+          <h2>Skills</h2>
+          <p class="sub">Tech I use to build reliable systems.</p>
+        </header>
+        <ul class="skills">
+          <li><strong>Languages:</strong> C#, Python, SQL, Swift, Java, C, C++, Golang, MatLab, Git/Bash, HTML, CSS, JavaScript</li>
+          <li><strong>Backend:</strong> ASP.NET Core, FastAPI, REST, gRPC</li>
+          <li><strong>Data:</strong> Postgres, Redis, EF Core</li>
+          <li><strong>Infra:</strong> Docker, GitHub Actions, CI/CD</li>
+          <li><strong>Concepts:</strong> DSA, caching, testing, observability</li>
+        </ul>
+      </div>
+    </section> -->
+    <!-- <section id="skills" class="section">
+        <div class="wrap">
+          <header class="section__hd">
+            <h2>Skills</h2>
+            <p class="sub">Tech I use to build reliable systems.</p>
+          </header>
+      
+          <div class="skills-pill-groups">
+            <div class="skills-group">
+              <h3>Languages</h3>
+              <ul class="skills-pills">
+                <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" alt="" />C#</li>
+                <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="" />Python</li>
+                <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="" />JavaScript</li>
+                <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/swift/swift-original.svg" alt="" />Swift</li>
+                <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg" alt="" />SQL</li>
+              </ul>
+            </div>
+      
+            <div class="skills-group">
+              <h3>Backend</h3>
+              <ul class="skills-pills">
+                <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dotnetcore/dotnetcore-original.svg" alt="" />ASP.NET Core</li>
+                <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" alt="" />FastAPI</li>
+                <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/grpc/grpc-original.svg" alt="" />gRPC</li>
+                <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="" />PostgreSQL</li>
+                <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" alt="" />Redis</li>
+              </ul>
+            </div>
+      
+            <div class="skills-group">
+              <h3>Infra & Tools</h3>
+              <ul class="skills-pills">
+                <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="" />Docker</li>
+                <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/githubactions/githubactions-original.svg" alt="" />GitHub Actions</li>
+                <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="" />Git</li>
+                <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="" />Linux</li>
+                <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" alt="" />Azure</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section> -->
+      <section id="skills" class="section">
+        <div class="wrap">
+          <header class="section__hd">
+            <h2>Skills</h2>
+            <p class="sub">A quick snapshot of my toolkit.</p>
+          </header>
+      
+          <ul class="skills-meters">
+            <li>
+              <div class="label"><span>C# / .NET</span><span class="hint">APIs, caching, tests</span></div>
+              <div class="meter" aria-label="C# skill level"><span style="--val:90%"></span></div>
+            </li>
+            <li>
+              <div class="label"><span>Python</span><span class="hint">FastAPI, data, ML basics</span></div>
+              <div class="meter"><span style="--val:80%"></span></div>
+            </li>
+            <li>
+              <div class="label"><span>SQL (Postgres)</span><span class="hint">indexes, query tuning</span></div>
+              <div class="meter"><span style="--val:78%"></span></div>
+            </li>
+            <li>
+              <div class="label"><span>Docker & CI/CD</span><span class="hint">compose, GH Actions</span></div>
+              <div class="meter"><span style="--val:72%"></span></div>
+            </li>
+            <li>
+              <div class="label"><span>Node.js</span><span class="hint">REST API, React.js</span></div>
+              <div class="meter"><span style="--val:60%"></span></div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      
+      
+
+    <!-- ABOUT -->
+    <section id="about" class="section section--alt">
+      <div class="wrap about">
+        <div>
+          <h2>About</h2>
+          <p>
+            Hello, my name is Jorge Camarena and I'm a recent UC Berkeley Graduate and an aspiring Bay Area based techie. I majored in Data Science with a concentration in Applied Mathematics and Modeling. 
+          </p>
+          <p>
+            When I'm feeling creative, I look to solve everyday problems using any tools I can find in my tech stack. A quick example; I enjoy working out, but I don't particularly like how fitness apps like MyFitnessPal track your fitness progression. So, I decided to build my own iPhone app to track my progress in a way that serves my needs (it's almost done and you'll soon see it live on my github). Aside from that, I'm a fan of nature, reading (currently reading the Three Body Problem Trilogy) hiking, fishing, and most recently, archery. Feel free to download my resume on the bottom of this page, and please reach out to me if you have any questions!
+
+
+          </p>
+          <div class="social-links">
+            <a href="https://github.com/jorge-camarena" target="_blank" rel="noopener" aria-label="GitHub">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="" />
+              <span>GitHub</span>
+            </a>
+            <a href="https://www.linkedin.com/in/jorge-camarena/" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="" />
+              <span>LinkedIn</span>
+            </a>
+            <a href="mailto:hello@example.com" aria-label="Email Jorge">
+              <img src="https://img.icons8.com/fluency-systems-filled/48/4cc9f0/new-post.png" alt="" />
+              <span>Email</span>
+            </a>
+          </div>
+          
+        </div>
+        <figure class="about__img">
+          <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop"
+               alt="Minimal desk setup with laptop and notebook" loading="lazy" />
+        </figure>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <div class="wrap">
+        <header class="section__hd">
+          <h2>Contact</h2>
+          <p class="sub">Let’s build something.</p>
+        </header>
+        <form class="form" action="#" method="post">
+          <div class="form__row">
+            <label for="name">Name</label>
+            <input id="name" name="name" required placeholder="Your name" />
+          </div>
+          <div class="form__row">
+            <label for="email">Email</label>
+            <input id="email" type="email" name="email" required placeholder="you@domain.com" />
+          </div>
+          <div class="form__row">
+            <label for="msg">Message</label>
+            <textarea id="msg" name="message" rows="5" required placeholder="What can we build?"></textarea>
+          </div>
+          <button class="btn" type="submit">Send Message</button>
+          <p class="muted small">*This is a static form—wire it to Formspree/Netlify or your API to receive submissions.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer__grid">
+      <p>© <span id="year"></span> Jorge Camarena. All rights reserved.</p>
+      <ul class="social">
+        <li><a href="#" aria-label="GitHub">GitHub</a></li>
+        <li><a href="#" aria-label="LinkedIn">LinkedIn</a></li>
+        <li><a href="mailto:hello@example.com" aria-label="Email">Email</a></li>
+      </ul>
+    </div>
+    <script>
+      // light enhancement: set current year; no other JS needed
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </footer>
+</body>
+</html>
